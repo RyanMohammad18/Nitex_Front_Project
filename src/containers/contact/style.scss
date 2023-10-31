@@ -1,0 +1,103 @@
+.contact {
+  &__content {
+    padding: 20px;
+
+    &__header-text {
+      color: black;
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 2px solid orange;
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      margin-top: 30px;
+
+      &__controlswrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 2px solid whitesmoke;
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+            color: black;
+          }
+
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-weight: 500;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            transition: all 0.2s ease;
+            color: black;
+            font-size: 16px;
+            background-color: rosybrown;
+          }
+
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: red;
+            border-color: #000;
+          }
+
+          .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel,
+          .inputEmail:focus + .emailLabel,
+          .inputEmail:valid + .emailLabel,
+          .inputDescription:focus + .descriptionLabel,
+          .inputDescription:valid + .descriptionLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 10px;
+      font-size: 1rem;
+      background: transparent;
+      color: red;
+      border: 1.5px solid black;
+      border-radius: 4px;
+      font-weight: 100;
+
+      &:hover {
+        color: #000;
+        background: white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__content__form {
+    text-align: center;
+
+    &__controlswrapper {
+      grid-template-columns: repeat(1, 1fr);
+      width: 200px;
+    }
+  }
+}

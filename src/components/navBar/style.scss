@@ -1,0 +1,99 @@
+.navBar {
+  background-color: #202a44;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1rem;
+  border-bottom: solid 1px white;
+
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+
+  &_container {
+    width: 100%;
+    height: inherit;
+    padding: 0px 20px;
+    transition: opacity 0.3s ease-in-out;
+
+    flex: 1;
+
+    &_logo {
+      color: yellow;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    &_menu {
+      display: flex;
+      width: 100%;
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+      padding-right: 2rem;
+      transition: opacity 0.3s ease-in-out;
+
+      &_item {
+        line-height: 40px;
+        margin-right: 2.5rem;
+        font-size: 1rem;
+
+        &::after {
+          content: "";
+          display: flex;
+          height: 3px;
+          width: 0;
+          background: red;
+          transition: all 0.5s ease;
+          opacity: 4;
+        }
+        &:hover::after {
+          width: 100%;
+          background-color: yellowgreen;
+        }
+        &_links {
+          color: white;
+          text-decoration: none;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+.nav-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navBar_container_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid whitesmoke;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+
+    &.active {
+      background-color: #03055a;
+      left: 0px;
+    }
+
+    &_item {
+      border-bottom: 1px solid red;
+      margin: 0px;
+      padding: 20px 0px;
+    }
+  }
+  .nav-icon {
+    display: block;
+
+    cursor: pointer;
+    color: red;
+    padding-right: 20px;
+  }
+}

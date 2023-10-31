@@ -1,0 +1,38 @@
+.stats-counter {
+   
+    margin-left: 200px;
+    background-color: rgb(196, 196, 147); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 300px; 
+   
+    
+    width: 300px;
+  
+    h3 {
+      margin: 0; 
+      font-size: 70px;
+    }
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin-top: 50px;
+    color: red;
+  }
+  
+  @media (max-width: 400px) {
+    .stats-counter {
+      width: 100%; 
+      margin: 0;
+      margin-top: 10px; 
+    }
+  
+    .services {
+      font-size: 30px; 
+    }
+  }

@@ -1,0 +1,57 @@
+.carouselcontainer {
+  width: 100%;
+  height: 100%; 
+  background-color: black; 
+  position: relative;
+}
+
+.carouselimage {
+  width: 100%; 
+  height: 700px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: relative;
+
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black !important;
+  padding: 25px;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.carousel-indicators {
+  bottom: 50px; 
+}
+
+.carousel-caption {
+  background-color: #333;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  margin-bottom: 50px;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideIn 2s forwards;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  color: white; 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+}
