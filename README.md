@@ -4,7 +4,7 @@ Project Name: Responsive Frontend Project for a company.
 
 GitHub Link: https://github.com/RyanMohammad18/Nitex_Front_Project 
 
-Live Link: 
+Live Link: https://tiny-eclair-dde334.netlify.app/ 
 
 Package Installation:
 
